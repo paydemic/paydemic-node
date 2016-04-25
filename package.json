@@ -1,0 +1,27 @@
+{
+  "name": "paydemic-node",
+  "version": "0.0.1",
+  "description": "Paydemic API for node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paydemic/paydemic-node.git"
+  },
+  "keywords": [
+    "paydemic",
+    "payment",
+    "processing",
+    "purchase",
+    "link",
+    "api"
+  ],
+  "author": "contact@paydemic.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paydemic/paydemic-node/issues"
+  },
+  "homepage": "https://github.com/paydemic/paydemic-node#readme"
+}
