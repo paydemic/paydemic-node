@@ -2,3 +2,5 @@ node_modules
 .npm-debug.log
 paydemic-node.iml
 .idea
+app.js
+lib/.DS_Store
