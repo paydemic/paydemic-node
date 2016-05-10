@@ -4,4 +4,4 @@ paydemic-node.iml
 .idea
 app.js
 lib/.DS_Store
-test/mocha/credentials/accessKey.js
+test/credentials/accessKey.json
