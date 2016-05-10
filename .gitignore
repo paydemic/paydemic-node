@@ -4,4 +4,3 @@ paydemic-node.iml
 .idea
 app.js
 lib/.DS_Store
-test/credentials/accessKey.json
