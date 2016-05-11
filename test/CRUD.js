@@ -63,6 +63,6 @@ describe('CRUD operations on Purchase Links', () => {
 
   it('should become fewer Purchase Links', () => {
           return paydemic.PurchaseLinks.list()
-            .should.eventually.have.length.equal(numberOfPurchaseLinks-1);
+            .should.eventually.be.an('array').with.property('length', numberOfPurchaseLinks-1);
         });
 })
