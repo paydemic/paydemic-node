@@ -9,9 +9,8 @@ chai.use(chaiAsPromised)
 expect(chaiAsPromised).to.not.be.undefined;
 
 const accessKey = require("./credentials/accessKey.json")
-const domainHolder = require("./credentials/domain.json")
 
-const paydemic = require('../index')(accessKey, domainHolder.domain);
+const paydemic = require('../index')(accessKey);
 
 expect(paydemic).to.not.be.undefined;
 expect(paydemic.PurchaseLinks).to.not.be.undefined;
