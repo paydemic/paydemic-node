@@ -31,8 +31,8 @@ describe('CRUD operations on Purchase Links', () => {
         .should.eventually.be.an('object').with.property('id');
   });
 
-  it('should fetch the existing Purchase Link', () => {
-      return paydemic.PurchaseLinks.fetch(purchaseLinkId)
+  it('should retrieve the existing Purchase Link', () => {
+      return paydemic.PurchaseLinks.retrieve(purchaseLinkId)
           .should.eventually.be.an('object').with.property('id', purchaseLinkId);
     });
 
