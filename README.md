@@ -53,7 +53,7 @@ paydemic.PurchaseLinks.retrieve(id)
 
 <a name="list_purchaselink"></a>
 ```js
-// retrieve an existing purchase link:
+// List all the existing purchase links under this project:
 
 paydemic.PurchaseLinks.list()
   .then(function(purchaseLinkArray) {
