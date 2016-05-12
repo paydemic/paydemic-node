@@ -18,7 +18,7 @@ var paydemic = require('paydemic')(accessKey);
 
 
 Every resource method returns a promise, so you don't have to use the regular callback. E.g.
-
+<a name="create_purchaselink"></a>
 ```js
 // Create a new purchase link:
 const purchaseLinkDefinition = {
@@ -32,6 +32,66 @@ const purchaseLinkDefinition = {
 paydemic.PurchaseLinks.create(purchaseLinkDefinition)
   .then(function(purchaseLink) {
   // New purchase link created
+  console.log('Created purchase link with id: ', purchaseLink.id);
+}).catch(function(err) {
+  // Deal with an error
+});
+```
+
+<a name="retrieve_purchaselink"></a>
+```js
+// retrieve an existing purchase link:
+
+paydemic.PurchaseLinks.retrieve(id)
+  .then(function(purchaseLink) {
+  // New purchase link created
+  console.log('Retrieved the purchase link created at UTC: ', purchaseLink.creationDate);
+}).catch(function(err) {
+  // Deal with an error
+});
+```
+
+<a name="list_purchaselink"></a>
+```js
+// retrieve an existing purchase link:
+
+paydemic.PurchaseLinks.list()
+  .then(function(purchaseLinkArray) {
+  // New purchase link created
+  console.log('The number of Purchase Links in this project is: ', purchaseLinkArray.length);
+}).catch(function(err) {
+  // Deal with an error
+});
+```
+
+<a name="update_purchaselink"></a>
+```js
+// Update an existing purchase link:
+const purchaseLinkDefinition = {
+                                    finalUrl: 'https://paydemic.com/faq.html',
+                                    price: {
+                                        currencyCode: 'USD',
+                                        amount: 3.76
+                                    },
+                                    title: 'Paydemic - FAQ'
+                                }
+paydemic.PurchaseLinks.update(id, purchaseLinkDefinition)
+  .then(function(purchaseLink) {
+  // The purchase link updated
+  console.log('Updated purchase link at UTC: ', purchaseLink.creationDate);
+}).catch(function(err) {
+  // Deal with an error
+});
+```
+
+<a name="remove_purchaselink"></a>
+```js
+// remove an existing purchase link:
+
+paydemic.PurchaseLinks.remove(id)
+  .then(function(purchaseLinkRemovalStatus) {
+  // Purchase link was removed
+  console.log('Purchase link removal status: ', purchaseLinkRemovalStatus.status);
 }).catch(function(err) {
   // Deal with an error
 });
@@ -39,7 +99,7 @@ paydemic.PurchaseLinks.create(purchaseLinkDefinition)
 
 ### Available resources & methods
 
-*Where you see `params` it is a plain JavaScript object.
+Where you see `params` it is a plain JavaScript object.
 
  * PurchaseLinks
     * [`create(params)`](https://github.com/paydemic/paydemic-node#create_purchaselink)
