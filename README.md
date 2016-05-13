@@ -1,5 +1,5 @@
 # paydemic-node
-Paydemic API for node.js
+[Paydemic.com](https://paydemic.com) API for node.js
 
 ## Installation
 
@@ -22,13 +22,13 @@ Every resource method returns a promise, so you don't have to use the regular ca
 ```js
 // Create a new purchase link:
 const purchaseLinkDefinition = {
-                                 finalUrl: 'https://paydemic.com/how-it-works.html',
-                                 price: {
-                                     currencyCode: 'USD',
-                                     amount: 9.9
-                                 },
-                                     title: 'Paydemic - How It Works'
-                               }
+  finalUrl: 'https://paydemic.com/how-it-works.html',
+  price: {
+  currencyCode: 'USD',
+    amount: 9.9
+  },
+  title: 'Paydemic - How It Works'
+};
 paydemic.PurchaseLinks.create(purchaseLinkDefinition)
   .then(function(purchaseLink) {
   // New purchase link created
@@ -68,13 +68,13 @@ paydemic.PurchaseLinks.list()
 ```js
 // Update an existing purchase link:
 const purchaseLinkDefinition = {
-                                    finalUrl: 'https://paydemic.com/faq.html',
-                                    price: {
-                                        currencyCode: 'USD',
-                                        amount: 3.76
-                                    },
-                                    title: 'Paydemic - FAQ'
-                                }
+  finalUrl: 'https://paydemic.com/faq.html',
+  price: {
+    currencyCode: 'USD',
+    amount: 3.76
+  },
+  title: 'Paydemic - FAQ'
+};
 paydemic.PurchaseLinks.update(id, purchaseLinkDefinition)
   .then(function(purchaseLink) {
   // The purchase link updated
