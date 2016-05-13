@@ -1,6 +1,6 @@
 {
-  "name": "paydemic",
-  "version": "0.0.2",
+  "name": "paydemic-sdk",
+  "version": "0.0.1",
   "description": "Paydemic API for node.js",
   "main": "index.js",
   "dependencies": {
