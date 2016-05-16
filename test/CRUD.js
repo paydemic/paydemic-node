@@ -70,6 +70,6 @@ describe('Balance Fetch', () => {
 
   it('should retrieve the existing Purchase Link', () => {
       return paydemic.Balance.retrieve()
-          .should.eventually.be.an('object').with.property('pending');
+          .should.eventually.be.an('object').with.property('USD');
     });
 })
