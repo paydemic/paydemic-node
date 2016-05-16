@@ -65,3 +65,11 @@ describe('CRUD operations on Purchase Links', () => {
             .should.eventually.be.an('array').with.property('length', numberOfPurchaseLinks-1);
         });
 })
+
+describe('Balance Fetch', () => {
+
+  it('should retrieve the existing Purchase Link', () => {
+      return paydemic.Balance.retrieve()
+          .should.eventually.be.an('object').with.property('pending');
+    });
+})
