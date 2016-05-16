@@ -6,7 +6,7 @@ module.exports = function(accessKey) {
 
   //const pjson = require('./package.json');
   GLOBAL.standard_options = {
-      hostname: (typeof process.env.PAYDEMIC_ACCOUNT_DOMAIN === undefined)?'account.paydemic.com':process.env.PAYDEMIC_ACCOUNT_DOMAIN,
+      hostname: 'account.paydemic.com',
       port: 443,
       headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
