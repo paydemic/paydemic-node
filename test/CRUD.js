@@ -36,6 +36,11 @@ describe('CRUD operations on Purchase Links', () => {
           .should.eventually.be.an('object').with.property('id', purchaseLinkId);
     });
 
+  it('should retrieve the existing Purchase Link Report', () => {
+        return paydemic.PurchaseLinkReports.retrieve(purchaseLinkId)
+            .should.eventually.be.an('object').with.property('id', purchaseLinkId);
+      });
+
   it('should update an existing Purchase Link', () => {
     const purchaseLinkDefinition = {
                                          finalUrl: 'https://paydemic.com/faq.html',

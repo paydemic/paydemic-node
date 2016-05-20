@@ -17,6 +17,7 @@ module.exports = function(accessKey) {
   //present all public methods
   return {
     PurchaseLinks: require('./lib/PurchaseLinks.js'),
+    PurchaseLinkReports: require('./lib/PurchaseLinkReports.js'),
     Balance: require('./lib/Balance.js')
   }
 }
