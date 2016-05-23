@@ -6,13 +6,13 @@ module.exports = function(accessKey) {
 
   //const pjson = require('./package.json');
   GLOBAL.standard_options = {
-      hostname: 'account.paydemic.com',
-      port: 443,
-      headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'User-Agent': 'paydemic-node/' + require('./package.json').version
-      }
-    };
+    hostname: 'account.paydemic.com',
+    port: 443,
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'paydemic-node/' + require('./package.json').version
+    }
+  };
 
   //present all public methods
   return {

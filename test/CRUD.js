@@ -20,61 +20,61 @@ describe('CRUD operations on Purchase Links', () => {
   var purchaseLinkId;
   it('should create a new Purchase Link', () => {
     const purchaseLinkDefinition = {
-                                         finalUrl: 'https://paydemic.com/how-it-works.html',
-                                         price: {
-                                             currencyCode: 'USD',
-                                             amount: 9.9
-                                         },
-                                         title: 'Paydemic - How It Works'
-                                     }
+      finalUrl: 'https://paydemic.com/how-it-works.html',
+      price: {
+        currencyCode: 'USD',
+        amount: 9.9
+      },
+      title: 'Paydemic - How It Works'
+    }
     return paydemic.PurchaseLinks.create(purchaseLinkDefinition).tap(result => {purchaseLinkId = result.id})
-        .should.eventually.be.an('object').with.property('id');
+    .should.eventually.be.an('object').with.property('id');
   });
 
   it('should retrieve the existing Purchase Link', () => {
-      return paydemic.PurchaseLinks.retrieve(purchaseLinkId)
-          .should.eventually.be.an('object').with.property('id', purchaseLinkId);
-    });
+    return paydemic.PurchaseLinks.retrieve(purchaseLinkId)
+    .should.eventually.be.an('object').with.property('id', purchaseLinkId);
+  });
 
   it('should retrieve the existing Purchase Link Report', () => {
-        return paydemic.PurchaseLinkReports.retrieve(purchaseLinkId)
-            .should.eventually.be.an('object').with.property('id', purchaseLinkId);
-      });
+    return paydemic.PurchaseLinkReports.retrieve(purchaseLinkId)
+    .should.eventually.be.an('object').with.property('id', purchaseLinkId);
+  });
 
   it('should update an existing Purchase Link', () => {
     const purchaseLinkDefinition = {
-                                         finalUrl: 'https://paydemic.com/faq.html',
-                                         price: {
-                                             currencyCode: 'USD',
-                                             amount: 3.76
-                                         },
-                                         title: 'Paydemic - FAQ'
-                                     }
+      finalUrl: 'https://paydemic.com/faq.html',
+      price: {
+        currencyCode: 'USD',
+        amount: 3.76
+      },
+      title: 'Paydemic - FAQ'
+    }
     return paydemic.PurchaseLinks.update(purchaseLinkId, purchaseLinkDefinition)
-        .should.eventually.be.an('object').with.property('id', purchaseLinkId);
+    .should.eventually.be.an('object').with.property('id', purchaseLinkId);
   });
 
   var numberOfPurchaseLinks;
   it('should return an array of Purchase Links', () => {
-        return paydemic.PurchaseLinks.list().tap((result) => numberOfPurchaseLinks = result.length)
-          .should.eventually.be.an('array');
-      });
+    return paydemic.PurchaseLinks.list().tap((result) => numberOfPurchaseLinks = result.length)
+    .should.eventually.be.an('array');
+  });
 
   it('should remove the Purchase Link', () => {
-        return paydemic.PurchaseLinks.remove(purchaseLinkId)
-            .should.eventually.be.an('object').with.property('status', 'SUCCESS');
-      });
+    return paydemic.PurchaseLinks.remove(purchaseLinkId)
+    .should.eventually.be.an('object').with.property('status', 'SUCCESS');
+  });
 
   it('should become fewer Purchase Links', () => {
-          return paydemic.PurchaseLinks.list()
-            .should.eventually.be.an('array').with.property('length', numberOfPurchaseLinks-1);
-        });
+    return paydemic.PurchaseLinks.list()
+    .should.eventually.be.an('array').with.property('length', numberOfPurchaseLinks-1);
+  });
 })
 
 describe('Balance Fetch', () => {
 
   it('should retrieve the existing Purchase Link', () => {
-      return paydemic.Balance.retrieve()
-          .should.eventually.be.an('object').with.property('USD');
-    });
+    return paydemic.Balance.retrieve()
+      .should.eventually.be.an('object').with.property('USD');
+  });
 })
