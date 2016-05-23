@@ -15,7 +15,7 @@ const paydemic = require('../index')(accessKey);
 expect(paydemic).to.not.be.undefined;
 expect(paydemic.PurchaseLinks).to.not.be.undefined;
 
-describe('CRUD operations on Purchase Links', () => {
+describe('CRUDL operations on Purchase Links', () => {
 
   var purchaseLinkId;
   it('should create a new Purchase Link', () => {
