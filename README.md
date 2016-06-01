@@ -24,18 +24,18 @@ Every resource method returns a promise, so you don't have to use the regular ca
 const purchaseLinkDefinition = {
   finalUrl: 'https://paydemic.com/how-it-works.html',
   price: {
-  currencyCode: 'USD',
+    currencyCode: 'USD',
     amount: 9.9
   },
   title: 'Paydemic - How It Works'
 };
 paydemic.PurchaseLinks.create(purchaseLinkDefinition)
   .then(function(purchaseLink) {
-  // New purchase link created
-  console.log('Created purchase link with id: ', purchaseLink.id);
-}).catch(function(err) {
-  // Deal with an error
-});
+    // New purchase link created
+    console.log('Created purchase link with id: ', purchaseLink.id);
+  }).catch(function(err) {
+    // Deal with an error
+  });
 ```
 
 <a name="retrieve_purchaselink"></a>
@@ -44,11 +44,11 @@ paydemic.PurchaseLinks.create(purchaseLinkDefinition)
 
 paydemic.PurchaseLinks.retrieve(id)
   .then(function(purchaseLink) {
-  // New purchase link created
-  console.log('Retrieved the purchase link created at UTC: ', purchaseLink.creationDate);
-}).catch(function(err) {
-  // Deal with an error
-});
+    // New purchase link created
+    console.log('Retrieved the purchase link created at UTC: ', purchaseLink.creationDate);
+  }).catch(function(err) {
+    // Deal with an error
+  });
 ```
 
 <a name="list_purchaselink"></a>
@@ -57,11 +57,11 @@ paydemic.PurchaseLinks.retrieve(id)
 
 paydemic.PurchaseLinks.list()
   .then(function(purchaseLinkArray) {
-  // New purchase link created
-  console.log('The number of Purchase Links in this project is: ', purchaseLinkArray.length);
-}).catch(function(err) {
-  // Deal with an error
-});
+    // New purchase link created
+    console.log('The number of Purchase Links in this project is: ', purchaseLinkArray.length);
+  }).catch(function(err) {
+    // Deal with an error
+  });
 ```
 
 <a name="update_purchaselink"></a>
@@ -77,11 +77,11 @@ const purchaseLinkDefinition = {
 };
 paydemic.PurchaseLinks.update(id, purchaseLinkDefinition)
   .then(function(purchaseLink) {
-  // The purchase link updated
-  console.log('Updated purchase link at UTC: ', purchaseLink.creationDate);
-}).catch(function(err) {
-  // Deal with an error
-});
+    // The purchase link updated
+    console.log('Updated purchase link at UTC: ', purchaseLink.creationDate);
+  }).catch(function(err) {
+    // Deal with an error
+  });
 ```
 
 <a name="remove_purchaselink"></a>
@@ -90,11 +90,11 @@ paydemic.PurchaseLinks.update(id, purchaseLinkDefinition)
 
 paydemic.PurchaseLinks.remove(id)
   .then(function(purchaseLinkRemovalStatus) {
-  // Purchase link was removed
-  console.log('Purchase link removal status: ', purchaseLinkRemovalStatus.status);
-}).catch(function(err) {
-  // Deal with an error
-});
+    // Purchase link was removed
+    console.log('Purchase link removal status: ', purchaseLinkRemovalStatus.status);
+  }).catch(function(err) {
+    // Deal with an error
+  });
 ```
 
 ### Available resources & methods
