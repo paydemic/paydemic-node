@@ -3,7 +3,7 @@
 
 ## Installation
 
-`npm install paydemic`
+`npm install paydemic-sdk`
 
 ## API Overview
 
